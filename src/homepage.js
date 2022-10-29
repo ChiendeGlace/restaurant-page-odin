@@ -8,7 +8,7 @@ export const makeHeader = (() => {
     content.appendChild(header);
 
     const pageTitle = document.createElement('h1');
-    pageTitle.textContent = 'Galactic Food';
+    pageTitle.textContent = 'Galactic Pizza';
 
     const headerLinks = document.createElement('div');
     const menuLink = document.createElement('button');
