@@ -12,7 +12,7 @@ export const makeContact = () => {
     const makeContactItem = (source, name, phone, email) => {
         const contactItem = document.createElement('div');
         contactBox.appendChild(contactItem);
-
+        contactBox.classList.add('contact-box');
         const contactItemImg = document.createElement('img');
         contactItemImg.src = source;
         const contactItemName = document.createElement('h3');
@@ -30,5 +30,5 @@ export const makeContact = () => {
     const alan = makeContactItem("../src/chef4.jpg", 'Alan Doe', '(902)-225-3116', 'alan.doe@email.com');
 
     contactContainer.append(contactTitle, contactBox);
-    content.append(contactContainer);
+    return contactContainer
 };

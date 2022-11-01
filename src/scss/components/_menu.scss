@@ -1,0 +1,47 @@
+@use './variables' as v;
+
+.menu-page {
+    padding: 5em 2em;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: 2rem;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+    }
+    img {
+        width: 200px;
+        height: 150px;
+    }
+    .menu-box {
+        display: grid;
+        grid-template-columns: repeat(2, 20em);
+        gap: 32px;
+        div {
+            display: flex;
+            border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;
+            padding: 1em 2em;
+            text-align: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.25rem;
+        }
+        p {
+            max-width: 10em;
+            font-size: 1.125rem;
+        }
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use './variables' as v;
+
+.homepage {
+    max-width: 40em;
+    margin-inline: auto;
+    height: auto;
+    padding: 5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    h2 {
+        font-size: 2rem;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+    }
+    button {
+        padding: 1em 1.75em;
+        cursor: pointer;
+        background-color:  #3b82f6;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+
+    }
+    .homepage-text {
+        max-width: 40em;
+        font-size: 1.125rem;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+    }
+    .homepage-text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    .homepage-box {
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding: 2em 2em 4em 2em;
+        background-color: white;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 32px;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 16px;
+            ul {
+                list-style: none;
+            }
+            h3 {
+                font-size: 1.25rem;
+            }
+            p, li {
+                margin: 0;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

@@ -1,14 +1,14 @@
 import { makeHeader, makeHomepage, container } from './homepage.js';
 import { makeMenu, menuContainer } from './menu.js';
 import { makeContact, contactContainer } from './contact.js';
+import "./scss/styles.scss";
 
 const content = document.querySelector('#content');
-
 makeHomepage();
 makeMenu();
-content.removeChild(menuContainer);
 makeContact();
-content.removeChild(contactContainer);
+content.appendChild(container);
+
 
 const displayMenu = (e) => {
     if (content.lastChild.classList.value === 'homepage') {

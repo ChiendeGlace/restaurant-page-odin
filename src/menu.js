@@ -20,6 +20,7 @@ export const makeMenu = () => {
         menuItemDescription.textContent = description;
         const menuItemPrice = document.createElement('p');
         menuItemPrice.textContent = price;
+        menuItemPrice.classList.add('price');
         menuItem.append(menuItemImg, menuItemName, menuItemDescription, menuItemPrice);
       };
 
@@ -30,6 +31,8 @@ export const makeMenu = () => {
     const mexicanPizza = makeMenuItem("../src/pizza5.jpg", 'Mexican Style', 'Spicy. Ground beef, Mexican chorizo, green onions, and jalapeños, topped with fresh cilantro.', '$26.99');
     const vegiePizza = makeMenuItem("../src/pizza6.jpg", 'Veggie', 'Black olives, mushrooms, bell peppers, red onions, tomatoes, and fresh garlic.', '$18.99');
 
+
     menuContainer.append(menuTitle, menuBox);
-    content.append(menuContainer);
+    menuBox.classList.add('menu-box');
+    return menuContainer;
 };
