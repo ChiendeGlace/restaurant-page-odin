@@ -15,18 +15,40 @@ module.exports = {
         ],
       },
       {
-        test:  /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
-        options: {
-            name: 'img/[name].[ext]',
-            publicPath: '/'
-        },
-    },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              // the webp option will enable WEBP
+              webp: {
+                quality: 75
+              }
+            }
+          },
+        ],
+      },
     ],
   },
   entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'http://0.0.0.0:8080/'
   },
 };
