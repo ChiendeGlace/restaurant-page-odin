@@ -24,10 +24,10 @@ export const makeContact = () => {
         contactItem.append(contactItemImg, contactItemName, contactItemPhone, contactItemEmail);
       };
 
-    const john = makeContactItem("./../src/chef1.jpg", 'John Doe', '(222)-345-3456', 'john.doe@email.com');
-    const george = makeContactItem("./../src/chef2.jpg", 'George Doe', '(467)-095-3776', 'george.doe@email.com');
-    const jeff = makeContactItem("./../src/chef3.jpg", 'Jeff Doe', '(289)-675-3336', 'jeff.doe@email.com');
-    const alan = makeContactItem("./../src/chef4.jpg", 'Alan Doe', '(902)-225-3116', 'alan.doe@email.com');
+    const john = makeContactItem("https://i.postimg.cc/zvYwMNzq/chef1.jpg", 'John Doe', '(222)-345-3456', 'john.doe@email.com');
+    const george = makeContactItem("https://i.postimg.cc/CMbs8R75/chef2.jpg", 'George Doe', '(467)-095-3776', 'george.doe@email.com');
+    const jeff = makeContactItem("https://i.postimg.cc/pdyB5kcM/chef3.jpg", 'Jeff Doe', '(289)-675-3336', 'jeff.doe@email.com');
+    const alan = makeContactItem("https://i.postimg.cc/T3d0fTrw/chef4.jpg", 'Alan Doe', '(902)-225-3116', 'alan.doe@email.com');
 
     contactContainer.append(contactTitle, contactBox);
     return contactContainer
